@@ -58,5 +58,4 @@ RI= np.array([
     0,0,0.52,0.89,1.11,1.25,1.35,1.40,1.45,1.49,1.52,1.54,1.56,1.58,1.59
 ])
 ahp = AHP(R,0.78,0.74,0.75,RI)
-# print(ahp.normalize_matrix(R))
-# print(np.round(R))
+print(ahp.consistency_ratio(R))
