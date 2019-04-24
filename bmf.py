@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import numpy 
-
-def biased_matrix_factorization(D,K,steps,beta,lamda):
-    S,I,P =[],[],[]
-    u= []
-    for i in range(len(D)):
-        for j in range(len(D[i])):
-            u
-=======
 import numpy as np
-
-
 def biased_matrix_factorization(D,W,H,K,beta=0.0002,lamda=0.02,steps=5000):
     H= H.T
     bs=[]
@@ -44,12 +32,11 @@ def biased_matrix_factorization(D,W,H,K,beta=0.0002,lamda=0.02,steps=5000):
             break
     return W,H,bs,bi,u
 R = np.array([
-     [5,3,0,1],
-     [4,0,0,1],
-     [1,1,0,5],
-     [1,0,0,4],
-     [0,1,5,4]
-    ])
+    [1,4,5,0,3],
+    [5,1,0,5,2],
+    [4,1,2,5,0],
+    [0,3,4,0,4]
+])
 
 N = len(R)
 M = len(R[0])
@@ -68,4 +55,3 @@ print(W)
 print('H:')
 print(H)
 print(predict())
->>>>>>> 880cb81667b0542c663dc1be439e1c3cdab6225d

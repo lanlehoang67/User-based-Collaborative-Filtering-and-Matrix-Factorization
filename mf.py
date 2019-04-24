@@ -17,7 +17,6 @@ def matrix_factorization(R,K, W, H, steps=5000, beta=0.0002, lamda=0.02):
                     e = e + pow(R[i][j] - numpy.dot(W[i,:],H[:,j]), 2)
                     for k in range(K):
                         e = e + (lamda/2) * (pow(W[i][k],2) + pow(H[k][j],2))
-        print(e)
         if e < 0.001:
             break
     return W, H.T
