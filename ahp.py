@@ -36,7 +36,7 @@ class AHP():
             weights[i] = R_nor2[i]/sum(R_nor2)
         return weights
     def consistency_ratio(self,R):
-        print(R.dot(self.priority_vector(R)))
+        # print(R.dot(self.priority_vector(R)))
         n = R.shape[0]
         R_cr = R.dot(self.normalize_matrix(R))
         c_vector = np.divide(R_cr, self.normalize_matrix(R))
@@ -58,4 +58,4 @@ RI= np.array([
     0,0,0.52,0.89,1.11,1.25,1.35,1.40,1.45,1.49,1.52,1.54,1.56,1.58,1.59
 ])
 ahp = AHP(R,0.78,0.74,0.75,RI)
-print(ahp.consistency_ratio(R))
+# print(ahp.consistency_ratio(R))

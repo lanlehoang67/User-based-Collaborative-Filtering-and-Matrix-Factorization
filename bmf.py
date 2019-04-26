@@ -31,12 +31,13 @@ def biased_matrix_factorization(D,W,H,K,beta=0.0002,lamda=0.02,steps=5000):
         if e < 0.001:
             break
     return W,H,bs,bi,u
-R = np.array([
-    [1,4,5,0,3],
-    [5,1,0,5,2],
-    [4,1,2,5,0],
-    [0,3,4,0,4]
-])
+R = [
+     [5,3,0,1],
+     [4,0,0,1],
+     [1,1,0,5],
+     [1,0,0,4],
+     [0,1,5,4],
+    ]
 
 N = len(R)
 M = len(R[0])
